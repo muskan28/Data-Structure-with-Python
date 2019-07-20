@@ -1,0 +1,18 @@
+Tower of Hanoi is a mathematical puzzle where we have three rods and n disks. The objective of the puzzle is to move the entire stack to another rod, obeying the following simple rules:
+1) Only one disk can be moved at a time.
+2) Each move consists of taking the upper disk from one of the stacks and placing it on top of another stack i.e. a disk can only be moved if it is the uppermost disk on a stack.
+3) No disk may be placed on top of a smaller disk.
+
+Algorithm For Tower of Hanoi Problem
+
+TOWER(N,BEG,AUX,END)
+	
+	1.IF N=1,THEN:
+		a. WRITE: BEG->END
+		b. RETURN
+	2.[MOVE N-1 DISKS FROM PEG BEG TO PEG AUX]
+	   CALL TOWER(N-1,BEG,END,AUX)
+	3.WRITE:BEG->END
+	4.[MOVE N-1 DISKS FROM PEG AUX TO PEG END]
+	   CALL TOWER(N-1,AUX,BEG,END)
+	5.RETURN 
