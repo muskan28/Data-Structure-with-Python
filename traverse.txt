@@ -1,0 +1,17 @@
+A linked list, or one way list, is a linear collection of data elements,
+called nodes,where the linear order is given by means of pointers.
+That is each node is divided into two parts: The first part contains the information of the element
+and the second part,called the link field or nextpointer field contains tge address of the next node in the list.
+
+ALGORITHM FOR TRAVERSING A LINKED LIST
+
+Let LIST be a linked list in memory stored in linear arrays INFO and LINK with 
+START pointing to the first element and NULL indicating the end of the LIST.
+The traversing algorithm uses a pointer variable PTR which points to the node that is currently being processed.
+
+1. Set PTR:=START [Initializes prointer PTR]
+2. Repeat steps 3 and 4 while PTR!= NULL
+3.		 Apply PROCESS to INFO[PTR]
+4.		 Set PTR:=LINK[PTR]    (PTR now points to the next node)
+	(End of step 2 loop)
+5. Exit
