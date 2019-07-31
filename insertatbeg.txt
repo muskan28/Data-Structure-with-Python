@@ -1,0 +1,13 @@
+The following algorithm inserts at the beginning of the list.
+The algorithm assumes the linked list is in the memory in the form of LIST(INFO,LINK,START,AVAIL)
+The variable ITEM contains the new information to be added to the list
+
+	INSFIRST(INFO,START,LINK,AVAIL,ITEM)
+	
+1.[OVERFLOW?] IF AVAIL=NULL, then Write OVERFLOW, and exit
+2.[ Remove node from AVAIL list]
+	set NEW:= AVAIL and AVAIL := LINK[AVAIL]
+3. Set INFO[NEW]:= ITEM [copies new data into new node]
+4. Set LINK[NEW]:= START[ New node points to original first node]
+5. Set START:= NEW [Now start points to the new node]
+6. Exit
